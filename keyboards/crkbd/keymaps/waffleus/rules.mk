@@ -1,0 +1,6 @@
+MCU = atmega32u4
+BOOTLOADER = caterina
+RGBLIGHT_ENABLE = yes
+OLED_DRIVER_ENABLE = yes
+LTO_ENABLE = yes
+WPM_ENABLE = yes
