@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -80,6 +80,28 @@ void gclipst_reset(qk_tap_dance_state_t *state, void *user_data) {
     cur_tap_state.state = 0;
 }
 
+void oslgui_finished(qk_tap_dance_state_t *state , void *user_data) {
+    cur_tap_state.state = cur_dance(state);
+    switch (cur_tap_state.state) {
+        case SINGLE_TAP: set_oneshot_layer(_RAISE, ONESHOT_START); break;
+        case SINGLE_HOLD: register_code(KC_RGUI); break;
+        case DOUBLE_TAP: set_oneshot_layer(_RAISE, ONESHOT_START); break;
+        case DOUBLE_HOLD: register_code(KC_RGUI); break;
+        case DOUBLE_SINGLE_TAP: tap_code(KC_TRNS); register_code(KC_TRNS);
+    }
+}
+
+void oslgui_reset(qk_tap_dance_state_t *state, void *user_data) {
+    switch (cur_tap_state.state) {
+        case SINGLE_TAP: clear_oneshot_layer_state(ONESHOT_OTHER_KEY_PRESSED); break;
+        case SINGLE_HOLD: unregister_code(KC_RGUI); break;
+        case DOUBLE_TAP: clear_oneshot_layer_state(ONESHOT_OTHER_KEY_PRESSED); break;
+        case DOUBLE_HOLD: unregister_code(KC_RGUI); break;
+        case DOUBLE_SINGLE_TAP: unregister_code(KC_TRNS);
+    }
+    cur_tap_state.state = 0;
+}
+
 void dance_pep_finished(qk_tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
       SEND_STRING(":widepeepohappy1::widepeepohappy2::widepeepohappy3::widepeepohappy4:"SS_TAP(X_ENTER));
@@ -90,9 +112,11 @@ void dance_pep_finished(qk_tap_dance_state_t *state, void *user_data) {
 
 void dance_qmk_finished(qk_tap_dance_state_t *state, void *user_data) {
     if (state->count == 1) {
-      SEND_STRING("https://github.com/qmk/qmk_firmware/find/master"SS_TAP(X_ENTER));
+        tap_code16(C(KC_T));
+        SEND_STRING("https://github.com/qmk/qmk_firmware/find/master"SS_TAP(X_ENTER));
     } else {
-      SEND_STRING("https://config.qmk.fm/#/"SS_TAP(X_ENTER));
+        tap_code16(C(KC_T));
+        SEND_STRING("https://config.qmk.fm/#/"SS_TAP(X_ENTER));
     }
 }
 
@@ -110,4 +134,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DOCS] = ACTION_TAP_DANCE_FN_ADVANCED_TIME(NULL, dance_doc_finished, NULL, 220),
     [MSLGUI] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, mslgui_finished, mslgui_reset),
     [GCLIPST] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, gclipst_finished, gclipst_reset),
+    [OSLGUI] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, oslgui_finished, oslgui_reset),
 };

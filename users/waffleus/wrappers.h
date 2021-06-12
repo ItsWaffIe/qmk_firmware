@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@
 #define LAYOUT_waffle_corne(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 #define LAYOUT_waffle_all(...) LAYOUT_all(__VA_ARGS__)
 #define LAYOUT_waffle_yoink(...) LAYOUT_split_bar(__VA_ARGS__)
+#define LAYOUT_waffle_qaz(...) LAYOUT_split_space(__VA_ARGS__)
 
 /*
           _____                    _____                    _____                    _____                    _____
@@ -46,11 +47,11 @@
 */
 
 #define ________________CRKBDQWERTY1_______________ QMKTD, ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP, KC_MNXT,
-#define ________________CRKBDQWERTY2_______________ ALT_TAB, SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, SFCLN, KC_MPLY,
+#define ________________CRKBDQWERTY2_______________ ALT_TAB, SFA, GUIS, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, GUIL, SFCLN, KC_MPLY,
 #define ________________CRKBDQWERTY3_______________ CP_PSTE, CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, CTLSLH, KC_MPRV,
 #define ________________CRKBDQWERTY4_______________ MSLGTD, LOWER, KC_SPC, KC_BSPC, RAISE, GCPTD
 
-#define ________________CRKBDLOWER1________________ DOCSTD, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, GPSCR,
+#define ________________CRKBDLOWER1________________ DOCSTD, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_TRNS,
 #define ________________CRKBDLOWER2________________ KC_SLCK, SFEXM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, SFPRN, MAKE,
 #define ________________CRKBDLOWER3________________ KC_NLCK, CTLESC, KC_TAB, KC_CAPS, KC_TILD, KC_GRV, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, KC_RCTL, HAPSAD,
 #define ________________CRKBDLOWER4________________ KC_LGUI, KC_TRNS, KC_SPC, KC_VOLU, KC_MS_U, KC_PGUP
@@ -75,7 +76,7 @@
 */
 
 #define ________________MDOXQWERTY1________________ ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP
-#define ________________MDOXQWERTY2________________ SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, SFCLN
+#define ________________MDOXQWERTY2________________ SFA, GUIS, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, GUIL, SFCLN
 #define ________________MDOXQWERTY3________________ CMDZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, CMDSLSH
 #define ________________MDOXQWERTY4________________ LOWER, KC_SPC, KC_MS_L, KC_MS_R, KC_BSPC, RAISE
 
@@ -99,8 +100,8 @@
 */
 
 #define ______________YOINKQWERTY1________________ QMKTD, ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP, ROFL, KC_MPLY
-#define ______________YOINKQWERTY2________________ ALT_TAB, SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, SFL, KC_BSPC, KC_MNXT
-#define ______________YOINKQWERTY3________________ CP_PSTE, CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT, KC_UP, KC_MPRV
+#define ______________YOINKQWERTY2________________ ALT_TAB, SFA, GUIS, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, SFL, KC_BSPC, KC_MNXT
+#define ______________YOINKQWERTY3________________ CP_PSTE, CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT, KC_RGUI, KC_MPRV
 #define ______________YOINKQWERTY4________________ KC_LCTL, KC_LALT, KC_LGUI, LWRSPC, RAISE, CLIPST, KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT
 
 #define _______________YOINKLOWER1________________ DOCSTD, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, STARX, KC_NO
@@ -127,17 +128,46 @@
 #define ______________ROMEOQWERTY1________________ QMKTD, ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP, KC_VOLU,
 #define ______________ROMEOQWERTY2________________ ALT_TAB, SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, SFL, KC_BSPC,
 #define ______________ROMEOQWERTY3________________ CP_PSTE, KC_MPLY, CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT, KC_RCTL,
-#define ______________ROMEOQWERTY4________________ KC_LALT, KC_TRNS, KC_LGUI, LWRSPC, KC_LGUI, RAISE, KC_RGUI, KC_TRNS, KC_VOLD
+#define ______________ROMEOQWERTY4________________ KC_LALT, KC_TRNS, KC_LGUI, LWRSPC, KC_LGUI, RAISE, CLIPST, KC_TRNS, KC_VOLD
 
-#define ______________ROMEOLOWER1_________________ DOCSTD, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, GPSCR,
+#define ______________ROMEOLOWER1_________________ DOCSTD, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_TRNS ,
 #define ______________ROMEOLOWER2_________________ KC_TRNS, SFEXM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, SFPRN,
 #define ______________ROMEOLOWER3_________________ HAPSAD, KC_TRNS, CTLESC, KC_TAB, KC_CAPS, KC_TILD, KC_GRV, KC_LEFT, KC_UP, KC_DOWN, CTLRGHT, KC_LCTL,
 #define ______________ROMEOLOWER4_________________ KC_LALT, KC_TRNS, KC_LGUI, KC_TRNS, KC_LGUI, KC_SLSH, KC_RGUI, KC_TRNS, KC_RALT
 
 #define ______________ROMEORAISE1_________________ KC_MNXT, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS, SHRUG, TABLE1, TABLE2, ARWUP, STARX, ROFL,
-#define ______________ROMEORAISE2_________________ KC_MPRV, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RANDICT,
+#define ______________ROMEORAISE2_________________ KC_MPRV, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RESET,
 #define ______________ROMEORAISE3_________________ KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
 #define ______________ROMEORAISE4_________________ KC_LALT, KC_TRNS, KC_LGUI, KC_SCLN, KC_SPC, KC_TRNS, KC_RGUI, KC_TRNS, KC_RALT
+
+/*
+         _             _             _
+        /\ \          / /\         /\ \
+       /  \ \        / /  \       /  \ \
+      / /\ \ \      / / /\ \   __/ /\ \ \
+     / / /\ \ \    / / /\ \ \ /___/ /\ \ \
+    / / /  \ \_\  / / /  \ \ \\___\/ / / /
+   / / / _ / / / / / /___/ /\ \     / / /
+  / / / /\ \/ / / / /_____/ /\ \   / / /    _
+ / / /__\ \ \/ / /_________/\ \ \  \ \ \__/\_\
+/ / /____\ \ \/ / /_       __\ \_\  \ \___\/ /
+\/________\_\/\_\___\     /____/_/   \/___/_/
+*/
+
+#define _______________QAZQWERTY1_________________ ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP,
+#define _______________QAZQWERTY2_________________ SFA, GUIS, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, SFL, KC_BSPC,
+#define _______________QAZQWERTY3_________________ CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT,
+#define _______________QAZQWERTY4_________________ KC_VOLU, KC_TRNS, KC_LGUI, LWRSPC, RAISE, CLIPST, KC_TRNS, KC_VOLD
+
+#define ________________QAZLOWER1_________________ KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0,
+#define ________________QAZLOWER2_________________ SFEXM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, SFPRN,
+#define ________________QAZLOWER3_________________ CTLESC, KC_TAB, KC_CAPS, KC_TILD, KC_GRV, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT,
+#define ________________QAZLOWER4_________________ KC_MPRV, KC_TRNS, KC_LGUI, KC_TRNS, KC_SLSH, CLIPST, KC_TRNS, KC_MNXT
+
+#define ________________QAZRAISE1_________________ KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS, RGB_HUD, RGB_HUI, RGB_SAD, RGB_SAI, RGB_TOG,
+#define ________________QAZRAISE2_________________ KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, RGB_M_SW, RGB_VAD, RGB_VAI, RGB_RMOD, RGB_RMOD,
+#define ________________QAZRAISE3_________________ QMKTD, DOCSTD, ROFL, HAPSAD, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
+#define ________________QAZRAISE4_________________ KC_TRNS, KC_TRNS, KC_LGUI, KC_SCLN, KC_TRNS, CLIPST, KC_TRNS, KC_TRNS
 
 /*
                                                tttt
@@ -159,7 +189,7 @@ e::::::::e           x:::::xx:::::x         t::::::tttt:::::tr:::::r          a:
 */
 
 #define ______________DEFAULTQWERTY1_______________ ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP
-#define ______________DEFAULTQWERTY2_______________ SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, SFL, KC_BSPC
+#define ______________DEFAULTQWERTY2_______________ SFA, GUIS, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, SFL, KC_BSPC
 #define ______________DEFAULTQWERTY3_______________ CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT//, CTLSLH
 
 #define ______________DEFAULTLOWER1_______________ KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0

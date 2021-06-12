@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,6 +36,5 @@ enum userspace_combos {
     SD_MSD,
     KL_MSU,
     XC_CLICK,
-    WO_ACHOO,
-    MACMD
+    ZM_ACHOO
 };

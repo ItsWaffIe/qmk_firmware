@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -48,7 +48,6 @@ enum unicodemap_names {
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
 #define ADJUST MO(_ADJUST)
-#define TGADJ TG(_ADJUST)
 #define LWRSPC LT(_LOWER, KC_SPC)
 //---general---
 #define SFA SFT_T(KC_A)
@@ -58,28 +57,21 @@ enum unicodemap_names {
 #define SFPRN MT(MOD_RSFT, KC_F24)
 #define ALTQ ALT_T(KC_Q)
 #define ALTP ALT_T(KC_P)
-//---linux/windows---
-#define GPSCR G(KC_PSCR)
 #define CTLZ CTL_T(KC_Z)
 #define CTLESC CTL_T(KC_ESC)
 #define CTLSLH CTL_T(KC_SLSH)
 #define CTLDOT CTL_T(KC_DOT)
 #define CTLRGHT CTL_T(KC_RIGHT)
 #define CLIPST C(S(KC_V))
-//---mac---
-#define MPSCR G(S(KC_4))
-#define MACTAB G(KC_TAB)
-#define CMDZ CMD_T(KC_Z)
-#define CMDESC CMD_T(KC_ESC)
-#define CMDSLSH CMD_T(KC_SLSH)
-#define CMDRGHT CMD_T(KC_RIGHT)
-#define CMDOT CMD_T(KC_DOT)
+#define GUIS GUI_T(KC_S)
+#define GUIL GUI_T(KC_L)
 //---tap dance---
 #define HAPSAD TD(HAP_SAD)
 #define DOCSTD TD(DOCS)
 #define QMKTD TD(QMK)
 #define MSLGTD TD(MSLGUI)
 #define GCPTD TD(GCLIPST)
+#define OSLGTD TD(OSLGUI)
 //---unicode---
 #define HAP X(SIDE)
 #define ARWUP X(UPAR)

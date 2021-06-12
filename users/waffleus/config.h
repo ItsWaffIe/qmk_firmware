@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 #include "config_common.h"
 
 #define IGNORE_MOD_TAP_INTERRUPT
+#define ONESHOT_TAP_TOGGLE 3
+#define ONESHOT_TIMEOUT 5000
 #define PERSMISSVE_HOLD
 #define TAPPING_TERM 150
 #define LAYER_STATE_8BIT
@@ -44,7 +46,7 @@
 #endif
 
 #ifdef UNICODEMAP_ENABLE
-#define UNICODE_SELECTED_MODES UC_LNX, UC_MAC, UC_WINC
+#define UNICODE_SELECTED_MODES UC_LNX
 #define UNICODE_CYCLE_PERSIST false
 #endif
 
@@ -71,9 +73,9 @@
 
 #ifdef COMBO_ENABLE
     #ifdef OLED_DRIVER_ENABLE
-        #define COMBO_COUNT 18
-    #else
         #define COMBO_COUNT 17
+    #else
+        #define COMBO_COUNT 16
     #endif
 #define COMBO_TERM 50
 #endif

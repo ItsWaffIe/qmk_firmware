@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,8 +35,7 @@ const uint16_t PROGMEM nm_combo[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM sd_combo[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM click_combo[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM ach_combo[] = {KC_W, KC_O, COMBO_END};
-const uint16_t PROGMEM mac_combo[] = {KC_Z, KC_P, COMBO_END};
+const uint16_t PROGMEM ach_combo[] = {KC_Z, KC_M, COMBO_END};
 #ifdef OLED_DRIVER_ENABLE
 const uint16_t PROGMEM flwr_combo[] = {KC_SPC, KC_ENT, COMBO_END};
 #endif
@@ -60,8 +59,7 @@ combo_t key_combos[COMBO_COUNT] = {
 [SD_MSD] = COMBO(sd_combo, KC_MS_D),
 [KL_MSU] = COMBO(kl_combo, KC_MS_U),
 [XC_CLICK] = COMBO_ACTION(click_combo),
-[WO_ACHOO] = COMBO_ACTION(ach_combo),
-[MACMD] = COMBO_ACTION(mac_combo),
+[ZM_ACHOO] = COMBO_ACTION(ach_combo),
 };
 
 void process_combo_event(uint16_t combo_index, bool pressed) {
@@ -77,11 +75,8 @@ void process_combo_event(uint16_t combo_index, bool pressed) {
             }
             break;
 
-        case WO_ACHOO:
+        case ZM_ACHOO:
             if (pressed) { SEND_STRING(SS_TAP(X_UP)SS_LCTL("a")"achoo"SS_TAP(X_ENT)); } break;
-
-        case MACMD:
-            if (pressed) { default_layer_set(1UL << _QWERTY); } break;
 
 #ifdef OLED_DRIVER_ENABLE
         case FLWR_RESET:

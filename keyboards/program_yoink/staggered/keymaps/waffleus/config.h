@@ -1,6 +1,4 @@
 #pragma once
-#undef MANUFACTURER
-#define MANUFACTURER Waffles
 #undef PRODUCT
 #define PRODUCT Program Yoink
 #define ENCODER_DIRECTION_FLIP

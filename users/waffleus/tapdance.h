@@ -1,4 +1,4 @@
-/* Copyright 2021 @waffle#6666
+/* Copyright 2021 @waffle#0007
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,6 +33,7 @@ enum tapdance_types {
 
 enum custom_tapdances {
     MSLGUI,
+    OSLGUI,
     GCLIPST,
     HAP_SAD,
     QMK,
@@ -44,6 +45,8 @@ void msgui_finished(qk_tap_dance_state_t *state, void *user_data);
 void msgui_reset(qk_tap_dance_state_t *state, void *user_data);
 void gclipst_finished(qk_tap_dance_state_t *state, void *user_data);
 void gclipst_reset(qk_tap_dance_state_t *state, void *user_data);
+void oslgui_finished(qk_tap_dance_state_t *state , void *user_data);
+void oslgui_reset(qk_tap_dance_state_t *state, void *user_data);
 void dance_pep_finished(qk_tap_dance_state_t *state, void *user_data);
 void dance_qmk_finished(qk_tap_dance_state_t *state, void *user_data);
 void dance_doc_finished(qk_tap_dance_state_t *state, void *user_data);
