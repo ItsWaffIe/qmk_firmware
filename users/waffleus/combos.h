@@ -36,5 +36,5 @@ enum userspace_combos {
     SD_MSD,
     KL_MSU,
     XC_CLICK,
-    ZM_ACHOO
+    _56ACHOO
 };

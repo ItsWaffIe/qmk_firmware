@@ -57,6 +57,8 @@ enum unicodemap_names {
 #define SFPRN MT(MOD_RSFT, KC_F24)
 #define ALTQ ALT_T(KC_Q)
 #define ALTP ALT_T(KC_P)
+#define ALT1 ALT_T(KC_1)
+#define ALT0 ALT_T(KC_0)
 #define CTLZ CTL_T(KC_Z)
 #define CTLESC CTL_T(KC_ESC)
 #define CTLSLH CTL_T(KC_SLSH)
