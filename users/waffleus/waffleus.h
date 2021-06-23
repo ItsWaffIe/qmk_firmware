@@ -49,6 +49,7 @@ enum unicodemap_names {
 #define RAISE MO(_RAISE)
 #define ADJUST MO(_ADJUST)
 #define LWRSPC LT(_LOWER, KC_SPC)
+#define RSEBSP LT(_RAISE, KC_BSPC)
 //---general---
 #define SFA SFT_T(KC_A)
 #define SFCLN RSFT_T(KC_SCLN)
@@ -67,6 +68,7 @@ enum unicodemap_names {
 #define CLIPST C(S(KC_V))
 #define GUIS GUI_T(KC_S)
 #define GUIL GUI_T(KC_L)
+#define LOCK G(KC_ESC)
 //---tap dance---
 #define HAPSAD TD(HAP_SAD)
 #define DOCSTD TD(DOCS)
