@@ -66,8 +66,6 @@ enum unicodemap_names {
 #define CTLDOT CTL_T(KC_DOT)
 #define CTLRGHT CTL_T(KC_RIGHT)
 #define CLIPST C(S(KC_V))
-#define GUIS GUI_T(KC_S)
-#define GUIL GUI_T(KC_L)
 #define LOCK G(KC_ESC)
 //---tap dance---
 #define HAPSAD TD(HAP_SAD)

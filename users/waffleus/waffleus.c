@@ -21,6 +21,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LWRSPC:
             return TAPPING_TERM - 30;
+        case RSEBSP:
+            return TAPPING_TERM - 30;
         default:
             return TAPPING_TERM;
     }
@@ -36,12 +38,30 @@ const uint32_t PROGMEM unicode_map[] = {
 };
 #endif
 
-#ifdef ENOCODER_ENABLE
-__attribute__ ((weak)) void encoder_update_user(uint8_t index, bool clockwise) {
-    if (IS_LAYER_ON(_QWERTY)) { tap_code((clockwise == true) ? KC_VOLU : KC_VOLD);
-    } else if (IS_LAYER_ON(_LOWER)) { tap_code((clockwise == true) ? KC_MNXT : KC_MPRV);
-    } else if (IS_LAYER_ON(_RAISE)) { tap_code((clockwise == true) ? rgblight_increase_hue() : rgblight_decrease_hue());
-    } else { tap_code((clockwise == true) ? rgblight_increase_sat() : rgblight_decrease_sat()); }
+#ifdef ENCODER_ENABLE
+/*__attribute__ ((weak)) bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) {
+        if (IS_LAYER_ON(_ADJUST)) { ((clockwise == true) ? rgblight_increase_sat() : rgblight_decrease_sat());
+        } else if (IS_LAYER_ON(_RAISE)) { tap_code((clockwise == true) ? KC_MNXT : KC_MPRV);
+        } else if (IS_LAYER_ON(_LOWER)) { tap_code((clockwise == true) ? KC_WWW_FORWARD : KC_WWW_BACK);
+        } else { tap_code((clockwise == true) ? KC_VOLU : KC_VOLD); }
+    } else if (index == 1) {
+        if (IS_LAYER_ON(_ADJUST)) { ((clockwise == true) ? rgblight_increase_hue() : rgblight_decrease_hue());
+        } else if (IS_LAYER_ON(_RAISE)) { tap_code16((clockwise == true) ? C(KC_TAB) : S(C(KC_TAB)));
+        } else if (IS_LAYER_ON(_LOWER)) { tap_code16((clockwise == true) ? C(KC_RGHT) : C(KC_LEFT));
+        } else { tap_code16((clockwise == true) ? C(KC_Y) : C(KC_Z)); }
+    }
+    return true;
+}*/
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) {
+        if (clockwise) { tap_code_delay(KC_VOLU, 20); }
+        else { tap_code_delay(KC_VOLD, 20); }
+    } else if (index == 1) {
+        if (clockwise) { tap_code_delay(KC_VOLU, 20); }
+        else { tap_code_delay(KC_VOLD, 20); }
+    }
+    return true;
 }
 #endif
 

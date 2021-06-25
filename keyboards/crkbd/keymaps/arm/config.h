@@ -6,20 +6,24 @@
 #define PRODUCT Protorne Keyboard
 #undef USE_I2C
 #undef SSD1306OLED
-#define MASTER_LEFT
+#define MASTER_RIGHT
 #define USE_SERIAL_PD2
 #ifdef RGBLIGHT_ENABLE
 #undef RGBLED_NUM
 #undef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 42
-#define RGBLED_SPLIT { 21, 21 }
+#define RGBLED_NUM 54
+#define RGBLED_SPLIT { 27, 27 }
 #define RGB_DI_PIN B5
-#define RGBLIGHT_LIMIT_VAL 175
+#define RGBLIGHT_LIMIT_VAL 100
 #endif
 #ifdef OLED_DRIVER_ENABLE
 #define OLED_TIMEOUT 50000
 #define OLED_FONT_H "keyboards/crkbd/keymaps/arm/glcdfont.c"
+#endif
+#ifdef POINTING_DEVICE_ENABLE
+#define PIMORONI_TRACKBALL_INVERT_X
+#define PIMORONI_TRACKBALL_INVERT_Y
 #endif
 #define WS2812_PWM_DRIVER PWMD3
 #define WS2812_PWM_CHANNEL 3

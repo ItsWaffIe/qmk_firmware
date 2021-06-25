@@ -1,5 +1,18 @@
 #include QMK_KEYBOARD_H
 #include <stdio.h>
+#ifdef POINTING_DEVICE_ENABLE
+    #include "pimoroni_trackball.h"
+    #include "pointing_device.h"
+#endif
+enum custom_keycodes {
+  BALL_HUI,//cycles hue
+  BALL_WHT,//cycles white
+  BALL_DEC,//decreased color
+  BALL_SCR,//scrolls
+  BALL_NCL,//left click
+  BALL_RCL,//right click
+  BALL_MCL,//middle click
+};
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
         KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSPC,
@@ -26,10 +39,37 @@ layer_state_t layer_state_set_user(layer_state_t state) { return update_tri_laye
 #ifdef RGBLIGHT_ENABLE
 void keyboard_post_init_user(void) {
     rgblight_enable_noeeprom();
-    rgblight_sethsv_noeeprom(HSV_PURPLE);
+    rgblight_sethsv_noeeprom(HSV_RED);
     rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
 }
 #endif //rgb
+#ifdef POINTING_DEVICE_ENABLE
+uint8_t white = 0;
+uint8_t red = 255;
+uint8_t green = 0;
+uint8_t blue = 0;
+void ball_increase_hue(void){
+      if(red!=255&&green!=255&&blue!=255){ red =255; }
+      if (red==255&&green<255&&blue==0){ green += 15;
+      } else if(green==255&&blue==0&&red>0){ red-=15;
+      } else if(red==0&&blue<255&&green==255){ blue+=15;
+      } else if(blue==255&&green>0&&red==0){ green -= 15;
+      } else if(green == 0&&blue==255&&red<255){ red +=15;
+      } else if(green ==0&&blue>0&&red==255){ blue -=15; }
+      trackball_set_rgbw(red,green,blue,white);
+}
+void decrease_color(void){
+  if (green>0){ green-=15; }
+  if (red>0){ red-=15; }
+  if (blue>0){ blue-=15; }
+  trackball_set_rgbw(red,green,blue,white);
+}
+void cycle_white(void){
+  if (white<255){ white +=15;
+  } else{ white=0; }
+  trackball_set_rgbw(red,green,blue,white);
+}
+#endif //trackball
 #ifdef OLED_DRIVER_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (!is_keyboard_master()) { return 2; }
@@ -107,6 +147,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
     set_keylog(keycode, record);
   }
+#ifdef POINTING_DEVICE_ENABLE
+  switch (keycode) {
+      case BALL_HUI:
+        if (record->event.pressed) { ball_increase_hue(); }
+        break;
+      case BALL_WHT:
+        if (record->event.pressed) { cycle_white(); }
+        break;
+      case BALL_DEC:
+        if (record->event.pressed) { decrease_color(); }
+        break;
+      case BALL_SCR:
+        if (record->event.pressed) {
+            trackball_set_scrolling(true);
+        } else {
+            trackball_set_scrolling(false);
+        }
+        break;
+      case BALL_NCL:
+        record->event.pressed ? register_code(KC_BTN1) : unregister_code(KC_BTN1);
+        break;
+      case BALL_RCL:
+        record->event.pressed ? register_code(KC_BTN2) : unregister_code(KC_BTN2);
+        break;
+      case BALL_MCL:
+        record->event.pressed ? register_code(KC_BTN3) : unregister_code(KC_BTN3);
+        break;
+  }
+#endif
   return true;
 }
 #endif //oled

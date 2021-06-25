@@ -1,8 +1,8 @@
 MCU = STM32F303
 CTPC = yes
-DEBUG_MATRIX_SCAN_RATE_ENABLE = no #Outputs matrix scan rate in QMK Toolbox
+DEBUG_MATRIX_SCAN_RATE_ENABLE = no
 SERIAL_DRIVER = usart
-WS2812_DRIVER = pwm #needs patch - see https://github.com/qmk/qmk_firmware/pull/11864
+WS2812_DRIVER = pwm
 VIA_ENABLE = yes
 OLED_DRIVER_ENABLE = yes
 WPM_ENABLE = no
@@ -15,3 +15,11 @@ SPLIT_KEYBOARD = yes
 RGBLIGHT_ENABLE = yes
 NKRO_ENABLE = yes
 ENCODER_ENABLE = yes
+ifeq ($(strip $(PIMORONI_TRACKBALL_ENABLE)), yes)
+    POINTING_DEVICE_ENABLE := yes
+    OPT_DEFS += -DPIMORONI_TRACKBALL_ENABLE
+    SRC += pimoroni_trackball.c
+    QUANTUM_LIB_SRC += i2c_master.c
+	MOUSEKEY_ENABLE = no
+endif
+PIMORONI_TRACKBALL_ENABLE = no

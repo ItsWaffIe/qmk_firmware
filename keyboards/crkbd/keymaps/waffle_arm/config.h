@@ -12,8 +12,8 @@
 #undef RGBLED_NUM
 #undef RGB_DI_PIN
 #define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 24
-#define RGBLED_SPLIT { 12, 12 }
+#define RGBLED_NUM 54
+#define RGBLED_SPLIT { 27, 27 }
 #define RGB_DI_PIN B5
 #define RGBLIGHT_LIMIT_VAL 175
 #endif
@@ -32,4 +32,5 @@
 #define ENCODERS_PAD_B { B6 }
 #define ENCODERS_PAD_A_RIGHT { B2 }
 #define ENCODERS_PAD_B_RIGHT { B6 }
+#define ENCODER_RESOLUTIONS { 2, 2 }
 #endif

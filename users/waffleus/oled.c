@@ -716,14 +716,14 @@ static const char PROGMEM plant_anim[FLOWER_FRAMES][FLOWER_SIZE] = {
 
 void flower_anim(void) { oled_write_raw_P(plant_anim[current_frame], FLOWER_SIZE); }
 
-#ifdef KEYBOARD_crkbd_rev1_common
+#ifdef KEYBOARD_crkbd
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
     if (!is_keyboard_master()) { return 3; } else { return 2; }
     return rotation;
 }
 
 void oled_task_user(void) {
-    if (is_master) {
+    if (is_keyboard_master()) {
         if (timer_elapsed32(oled_timer) > 30000) {
             oled_off();
             return;
