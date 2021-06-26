@@ -24,6 +24,8 @@
  */
 #pragma once
 
+#define I2C_READ 0x01 //added 06/25/2021
+#define I2C_WRITE 0x00 //added 06/25/2021
 #include <ch.h>
 #include <hal.h>
 
