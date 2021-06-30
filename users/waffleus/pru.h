@@ -19,7 +19,6 @@
 
 enum userspace_custom_keycodes {
     CP_PSTE = SAFE_RANGE,
-    MAC_PSTE,
     ROFL,
 #ifdef UNICODEMAP_ENABLE
     UNIT,
@@ -33,6 +32,15 @@ enum userspace_custom_keycodes {
 #ifdef RGBLIGHT_ENABLE
     RGBRST,
 #endif
+#ifdef PIMORONI_TRACKBALL
+    BALL_HUI, //cycles hue
+    BALL_WHT, //cycles white
+    BALL_DEC, //decrease color
+    BALL_SCR, //scroll
+    BALL_NCL, //left click
+    BALL_RCL, //right click
+    BALL_MCL, //middle click
+#endif
 #ifdef RANDICT
     RWORD,
 #endif
@@ -40,8 +48,6 @@ enum userspace_custom_keycodes {
     SECRET1,
     SECRET2,
     SECRET3,
-    SECRET4,
-    SECRET5,
 #endif
     ALT_TAB,
     MAKE
