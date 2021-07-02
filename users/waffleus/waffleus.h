@@ -26,10 +26,6 @@
 #ifdef OLED_DRIVER_ENABLE
 #include "oled.h"
 #endif
-#ifdef PIMORONI_TRACKBALL
-#include "pimoroni_trackball.h"
-#include "pointing_device.h"
-#endif
 
 enum layers {
     _QWERTY,

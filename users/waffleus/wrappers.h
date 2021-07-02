@@ -99,19 +99,19 @@
   |___/
 */
 
-#define ______________YOINKQWERTY1________________ QMKTD, ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP, ROFL,        KC_MPLY,
-#define ______________YOINKQWERTY2________________ ALT_TAB, SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J,  KC_K,  KC_L, SFCLN,          KC_MNXT,
-#define ______________YOINKQWERTY3________________ CP_PSTE,  CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT,   KC_UP,   KC_MPRV,
+#define ______________YOINKQWERTY1________________ QMKTD, ALTQ, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, ALTP, ROFL,        KC_MPLY
+#define ______________YOINKQWERTY2________________ ALT_TAB, SFA, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J,  KC_K,  KC_L, SFCLN,          KC_MNXT
+#define ______________YOINKQWERTY3________________ CP_PSTE,  CTLZ, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, CTLDOT,   KC_UP,   KC_MPRV
 #define ______________YOINKQWERTY4________________ KC_LCTL, KC_LALT, KC_LGUI, LWRSPC, RSEBSP, CLIPST, KC_RCTL,   KC_LEFT, KC_DOWN, KC_RGHT
 
-#define _______________YOINKLOWER1________________ DOCSTD, ALT1, KC_2,   KC_3,    KC_4,   KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    ALT0, STARX,       KC_NO,
-#define _______________YOINKLOWER2________________ LOCK,    SFEXM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, SFPRN,            KC_NO,
-#define _______________YOINKLOWER3________________ HAPSAD,   CTLESC, KC_TAB, KC_CAPS, KC_TILD, KC_GRV, KC_LEFT, KC_UP, KC_DOWN, CTLRGHT,        RGB_M_P,  KC_NO,
+#define _______________YOINKLOWER1________________ DOCSTD, ALT1, KC_2,   KC_3,    KC_4,   KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    ALT0, STARX,       KC_NO
+#define _______________YOINKLOWER2________________ LOCK, SFEXM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, SFPRN,            KC_NO
+#define _______________YOINKLOWER3________________ HAPSAD,   CTLESC, KC_TAB, KC_CAPS, KC_TILD, KC_GRV, KC_LEFT, KC_UP, KC_DOWN, CTLRGHT,        RGB_M_P,  KC_NO
 #define _______________YOINKLOWER4________________ KC_LCTL, KC_LALT, KC_LGUI,   KC_TRNS,          KC_SLSH,          CLIPST, KC_RCTL,  RGB_RMOD, RGB_M_SN, RGB_MOD
 
-#define _______________YOINKRAISE1________________ UC_M_LN, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, ARWUP,       RESET,
-#define _______________YOINKRAISE2________________ UC_M_MA,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,            MAKE,
-#define _______________YOINKRAISE3________________ KC_F1,       KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,  KC_F7, KC_F8, KC_F9, KC_F10,        RGB_VAI, EEP_RST,
+#define _______________YOINKRAISE1________________ UC_M_LN, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, ARWUP,       RESET
+#define _______________YOINKRAISE2________________ UC_M_MA,   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,            MAKE
+#define _______________YOINKRAISE3________________ KC_F1,       KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,  KC_F7, KC_F8, KC_F9, KC_F10,        RGB_VAI, EEP_RST
 #define _______________YOINKRAISE4________________ KC_LCTL, KC_LALT, KC_LGUI,   KC_SCLN,            KC_TRNS,                 CLIPST, KC_RCTL,   KC_TRNS, RGB_VAD, KC_TRNS
 
 /*
