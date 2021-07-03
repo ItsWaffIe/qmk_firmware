@@ -33,6 +33,15 @@ enum userspace_custom_keycodes {
 #ifdef RGBLIGHT_ENABLE
     RGBRST,
 #endif
+#ifdef PIMORONI_TRACKBALL
+    BALL_HUI, //cycles hue
+    BALL_WHT, //cycles white
+    BALL_DEC, //decrease color
+    BALL_SCR, //scroll
+    BALL_NCL, //left click
+    BALL_RCL, //right click
+    BALL_MCL, //middle click
+#endif
 #ifdef RANDICT
     RWORD,
 #endif
