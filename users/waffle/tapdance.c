@@ -93,9 +93,9 @@ void oslgui_finished(qk_tap_dance_state_t *state , void *user_data) {
 
 void oslgui_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (cur_tap_state.state) {
-        case SINGLE_TAP: clear_oneshot_layer_state(ONESHOT_OTHER_KEY_PRESSED); break;
+        case SINGLE_TAP: clear_oneshot_layer_state(ONESHOT_PRESSED); break;
         case SINGLE_HOLD: unregister_code(KC_RGUI); break;
-        case DOUBLE_TAP: clear_oneshot_layer_state(ONESHOT_OTHER_KEY_PRESSED); break;
+        case DOUBLE_TAP: clear_oneshot_layer_state(ONESHOT_PRESSED); break;
         case DOUBLE_HOLD: unregister_code(KC_RGUI); break;
         case DOUBLE_SINGLE_TAP: unregister_code(KC_TRNS);
     }

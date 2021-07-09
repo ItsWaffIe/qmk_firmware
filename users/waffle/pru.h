@@ -15,7 +15,7 @@
  */
 
 #pragma once
-#include "waffleus.h"
+#include "waffle.h"
 
 enum userspace_custom_keycodes {
     CP_PSTE = SAFE_RANGE,
@@ -44,13 +44,6 @@ enum userspace_custom_keycodes {
 #endif
 #ifdef RANDICT
     RWORD,
-#endif
-#ifdef SECRETS
-    SECRET1,
-    SECRET2,
-    SECRET3,
-    SECRET4,
-    SECRET5,
 #endif
     ALT_TAB,
     MAKE

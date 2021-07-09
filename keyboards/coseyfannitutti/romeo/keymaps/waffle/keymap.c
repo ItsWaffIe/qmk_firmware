@@ -1,4 +1,4 @@
-#include "waffleus.h"
+#include "waffle.h"
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_waffle_all(
         ______________ROMEOQWERTY1________________

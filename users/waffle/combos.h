@@ -15,7 +15,7 @@
  */
 
 #pragma once
-#include "waffleus.h"
+#include "waffle.h"
 
 enum userspace_combos {
 #ifdef OLED_DRIVER_ENABLE

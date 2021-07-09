@@ -1,4 +1,4 @@
-USER_NAME := waffleus
+USER_NAME := waffle
 MCU = STM32F303
 CTPC = yes
 DEBUG_MATRIX_SCAN_RATE_ENABLE = no

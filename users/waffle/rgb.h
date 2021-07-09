@@ -15,7 +15,7 @@
  */
 
 #pragma once
-#include "waffleus.h"
+#include "waffle.h"
 enum rgb_userspace_keycodes { CYAN };
 
 bool process_record_user_rgb_light(uint16_t keycode, keyrecord_t *record);

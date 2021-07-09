@@ -15,7 +15,7 @@
  */
 
 #pragma once
-#include "waffleus.h"
+#include "waffle.h"
 typedef struct {
     bool is_press_action;
     uint8_t state;

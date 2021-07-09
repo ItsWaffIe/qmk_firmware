@@ -5,10 +5,9 @@ COMBO_ENABLE = yes
 TAP_DANCE_ENABLE = yes
 LTO_ENABLE = yes
 UNICODEMAP_ENABLE = yes
-RANDICT = yes
-SECRETS = yes
+RANDICT = no
 
-SRC += waffleus.c \
+SRC += waffle.c \
 		tapdance.c \
 		combos.c \
 		pru.c
@@ -17,15 +16,7 @@ ifeq ($(strip $(PIMORONI_TRACKBALL)), yes)
     POINTING_DEVICE_ENABLE := yes
     OPT_DEFS += -DPIMORONI_TRACKBALL
     SRC += pimoroni_trackball.c
-    QUANTUM_LIB_SRC += i2c_master.c 
-endif
-
-ifneq ("$(wildcard $(USER_PATH)/secrets.c)","")
-  SRC += secrets.c
-endif
-
-ifeq ($(strip $(SECRETS)), yes)
-    OPT_DEFS += -DSECRETS
+    QUANTUM_LIB_SRC += i2c_master.c
 endif
 
 ifeq ($(strip $(BOOTLOADER)), nanoboot)

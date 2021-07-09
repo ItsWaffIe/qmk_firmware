@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "waffleus.h"
+#include "waffle.h"
 #ifdef RANDICT
 #include "users/ridingqwerty/dict.h"
 uint16_t rand_key;
@@ -26,11 +26,6 @@ bool random_word(void){
 #endif
 uint16_t alt_tab_timer = 0;
 bool is_alt_tab_active = false;
-
-#ifdef SECRETS
-__attribute__ ((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true; }
-__attribute__ ((weak)) bool process_record_secrets(uint16_t keycode, keyrecord_t *record) { return true; }
-#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef OLED_DRIVER_ENABLE
@@ -166,9 +161,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     }
     return true;
-#ifdef SECRETS
-    return process_record_keymap(keycode, record) && process_record_secrets(keycode, record);
-#endif
 };
 
 void matrix_scan_user(void) {

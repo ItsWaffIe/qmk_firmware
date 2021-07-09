@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "waffleus.h"
+#include "waffle.h"
 #include "quantum.h"
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {

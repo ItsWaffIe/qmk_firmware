@@ -15,7 +15,7 @@
  */
 
 #pragma once
-#include "waffleus.h"
+#include "waffle.h"
 #define LAYOUT_waffle(...) LAYOUT(__VA_ARGS__)
 #define LAYOUT_waffle_corne(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 #define LAYOUT_waffle_all(...) LAYOUT_all(__VA_ARGS__)

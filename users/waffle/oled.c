@@ -14,9 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "waffleus.h"
+#include "waffle.h"
 #include <stdio.h>
-static uint32_t oled_timer      = 0;
+static uint32_t oled_timer = 0;
 static int num_keypresses = 0;
 static int flower_frame = 0;
 uint8_t current_idle_frame = 0;
