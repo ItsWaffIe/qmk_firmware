@@ -1,6 +1,4 @@
 #pragma once
 #define USE_SERIAL_PD2
-#undef RGBLED_NUM
 #define RGBLIGHT_EFFECT_TWINKLE
-#define RGBLED_NUM 27
 #define RGBLIGHT_LIMIT_VAL 155

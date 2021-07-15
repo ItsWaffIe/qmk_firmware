@@ -47,7 +47,7 @@
 */
 
 #define ________________CRKBDQWERTY1_______________ KC_MPLY, ALTQ, KC_W, KC_E, KC_R, KC_T,          KC_Y, KC_U, KC_I,    KC_O,   ALTP,   ROFL,
-#define ________________CRKBDQWERTY2_______________ QMKTD,   SFA,  KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K,    KC_L,   SFCLN,  RWORD,
+#define ________________CRKBDQWERTY2_______________ QMKTD,   SFA,  KC_S, KC_D, KC_F, KC_G,          KC_H, KC_J, KC_K,    KC_L,   SFCLN,  KC_TRNS,
 #define ________________CRKBDQWERTY3_______________ CP_PSTE, CTLZ, KC_X, KC_C, KC_V, KC_B,          KC_N, KC_M, KC_COMM, KC_DOT, CTLSLH, ADJUST,
 #define ________________CRKBDQWERTY4_______________                     MSLGTD, LOWER, KC_SPC, KC_BSPC, RAISE, GCPTD
 
@@ -62,8 +62,8 @@
 #define ________________CRKBDRAISE4________________                              KC_PGDN, KC_MS_D, KC_VOLD, KC_BSPC, KC_TRNS, KC_RALT
 
 #define _______________CRKBDADJUST1________________ RGB_TOG,  RGB_M_P, RGB_M_G,  RGB_HUD, RGB_HUI, RGB_SPI,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, RESET,
-#define _______________CRKBDADJUST2________________ RGB_MOD,  RGB_M_B, CYAN,     RGB_SAD, RGB_SAI, RGB_SPD,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-#define _______________CRKBDADJUST3________________ RGB_RMOD, RGB_M_R, RGB_M_SW, RGB_VAD, RGB_VAI, RGBRST,          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+#define _______________CRKBDADJUST2________________ RGB_MOD,  RGB_M_B, RGB_M_TW, RGB_SAD, RGB_SAI, RGB_SPD,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+#define _______________CRKBDADJUST3________________ RGB_RMOD, RGB_M_R, RGB_M_SW, RGB_VAD, RGB_VAI, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 #define _______________CRKBDADJUST4________________                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 
 /*

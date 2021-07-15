@@ -43,6 +43,7 @@
 #ifdef OLED_DRIVER_ENABLE
 #define OLED_TIMEOUT 50000
 #define OLED_FONT_H "users/waffle/oledfonts.c"
+#define OLED_UPDATE_INTERVAL 100 
 #endif
 
 #ifdef UNICODEMAP_ENABLE
